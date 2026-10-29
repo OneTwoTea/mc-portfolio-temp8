@@ -1,0 +1,65 @@
+<!-- ĐÂY LÀ FILE KHUNG — Không sửa nội dung trực tiếp ở đây.
+     Nội dung lấy từ site.config.js, các khối {{{ @ten }}} do src/templates.js sinh ra.
+     {{ duong.dan }} = chèn giá trị (đã escape), {{{ @tenRenderer }}} = chèn HTML.
+     Giao diện "Thiệp Mời": các <section class="card"> trong <main> là những tấm thiệp xếp chồng.
+     Build sẽ tự xóa comment này. -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  {{{ @seoHead }}}
+  <script>document.documentElement.classList.add("js")</script>
+  <!-- Google Fonts: Great Vibes (chữ viết tay), Fraunces (tiêu đề), Mulish (nội dung) — có tiếng Việt, display=swap, không chặn render -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=Great+Vibes&family=Mulish:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=Great+Vibes&family=Mulish:wght@400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">{{{ @skipLink }}}</a>
+
+  <!-- ═══ ĐẦU TRANG (không menu) ═══ -->
+  {{{ @masthead }}}
+
+  <!-- ═══ CHỒNG THIỆP ═══ -->
+  <main id="main" class="stack" tabindex="-1">
+    <!-- Phong bì + thiệp mời -->
+    {{{ @heroSection }}}
+
+    <!-- Lá thư ngỏ (giới thiệu) -->
+    {{{ @aboutSection }}}
+
+    <!-- Thực đơn dịch vụ -->
+    {{{ @servicesSection }}}
+
+    <!-- Album: video + gallery -->
+    {{{ @albumSection }}}
+
+    <!-- Sổ lưu bút (cảm nhận) -->
+    {{{ @testimonialsSection }}}
+
+    <!-- Danh sách khách mời (đối tác) -->
+    {{{ @partnersSection }}}
+
+    <!-- Điều cần biết (hỏi đáp) -->
+    {{{ @faqSection }}}
+
+    <!-- Phiếu hồi âm (liên hệ) -->
+    {{{ @contactSection }}}
+  </main>
+
+  <!-- ═══ MẶT SAU PHONG BÌ (FOOTER) ═══ -->
+  {{{ @footerSection }}}
+
+  <!-- ═══ CON DẤU SÁP NỔI ═══ -->
+  {{{ @floatingButton }}}
+
+  <!-- ═══ HỘP THOẠI ẢNH / VIDEO ═══ -->
+  {{{ @dialogs }}}
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
